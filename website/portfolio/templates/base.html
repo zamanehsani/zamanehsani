@@ -15,9 +15,9 @@
   </head>
   <body style="font-family: 'Comfortaa', cursive;" class=" bg-light">
 
-    <div class="bg-primary">
+    <div class="bg-success shadow ">
       <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark">
           <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home_page' %}">
               <img src="{% static 'img/logo.png' %}" alt="Logo"  height="40">
@@ -27,54 +27,54 @@
               <span class="navbar-toggler-icon"></span>
             </button>
     
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav nav justify-content-center me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse justify-content-center pt-2" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <h5><a class="nav-link active text-warning " aria-current="page" href="#">Home</a></h5>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <h5><a class="nav-link text-warning" href="#">About</a></h5>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Works</a>
+                  <h5><a class="nav-link text-warning" href="#">Works</a></h5>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
+                  <h5><a class="nav-link text-warning" href="#">Services</a></h5>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Blog</a>
+                  <h5><a class="nav-link text-warning" href="#">Blog</a></h5>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">contact me</a>
+                  <h5><a class="nav-link text-warning" href="#">contact me</a></h5>
                 </li>
               </ul>
-              <div class="d-flex">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <div class="d-flex ms-auto">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" href="#"><span class="iconify" data-icon="fa:facebook"></span></a>
+                    <a class="nav-link " href="https://www.facebook.com/zaman.ehsani"  title="Find me on Facebook" target="_blank"><h5> <span class="iconify" data-icon="fa:facebook"></span></h5></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="#"><span class="iconify" data-icon="fa:instagram"></span></a>
+                    <a class="nav-link " href="https://www.instagram.com/zaman_ehsani/" title="Follow me on Instagram" target="_blank"><h5><span class="iconify" data-icon="fa:instagram"></span></h5></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="#"><span class="iconify" data-icon="fa:linkedin"></span></a>
+                    <a class="nav-link " href="https://www.linkedin.com/in/zamanehsani/" title="Connect With me on Linkedin" target="_blank"><h5><span class="iconify" data-icon="fa:linkedin"></span></h5></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="#"><span class="iconify" data-icon="fa:github"></span></a>
+                    <a class="nav-link " href="https://github.com/Zee98" title="See my Github Profile" target="_blank"><h5><span class="iconify" data-icon="fa:github"></span></h5></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="#"><span class="iconify" data-icon="fa:whatsapp"></span></a>
+                    <a class="nav-link " href="https://wa.me/message/A4D76HO6P7DKH1" title=" Reach me on WhatsApp" target="_blank"><h5><span class="iconify" data-icon="fa:whatsapp"></span></h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="https://t.me/zamanehsani98" title="Reach me on Telegram" target="_blank"><h5><span class="iconify" data-icon="fa:telegram"></span></h5></a>
                   </li>
                 </ul>
               </div>
             </div>
-            
           </div>
         </nav>
       </div>
     </div>
-
-
 
 
     {% block content %}
