@@ -9,3 +9,7 @@ class IndexView(ListView):
 class About(ListView):
     model = Index
     template_name = 'about.html'
+
+class Works(ListView):
+    model = Index
+    template_name = 'works.html'

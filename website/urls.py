@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', zee_view.IndexView.as_view(), name="home_page"),
     path('about', zee_view.About.as_view(), name='about'),
+    path('work', zee_view.Works.as_view(), name='works'),
 ]

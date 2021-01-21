@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container p-0 bg-success">
+    <div class="container">
+     <div class="row">
+       <div class="col-ms-12 col-md-12 justify-content-center pt-4">
+           <p class="text-white text-center fs-5 text-start">
+            Check out some websites and web applications I have built.
+          </p>
+       </div>
+     </div>
+    </div>
+   <div class="bg-wave" style="height: 100px;">
+   </div>
+ </div>
+
+ <!-- works -->
+ <div class="container bg-white">
+    <h2 class="text-center fw-bolder text-warning pt-3 roboto-bold"> My Projects</h2>
+    <p class="text-center mb-3 text-success mx-5 px-5 "> I have build websites and applications using Python, Django, JavaScript, Jquery, Bootstrap, PHP, Laravel, and CodeIgniter.
+        I have used C# and java also.
+     </p>
+     <!-- Dy -->
+    <div class="row flex-md-row-reverse">
+      <div class="col-sm-12 col-md-6 col-lg-6 p-2 ">
+        <img src="{% static 'img/dy.png' %}" alt="dy website" class="dyphoto rounded-3 mb-3 my-auto mx-auto d-block bg-transparent">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <h4 class="mt-2 mt-lg-5 text-center fw-bolder text-success roboto-bold">Dynamic Youth of Afghanistan</h4>
+        <p class="text-center fs-6"><a href="https://pacific-spire-86111.herokuapp.com" target="_blank" class="text-decoration-none "> visit the website</a></p>
+        <p class="text-success">
+          DYOA is a non-governmental and not for profit youth-led civil rights organization,
+           works in the areas of Career & Education, Peacebuilding & Leadership Development aligned with the Global 
+           Goals of United Nations (SDGs).
+        </p>
+      </div>
+    </div>
+
+    <!-- broker awareness -->
+    <div class="row mt-5">
+        <div class="col-sm-12 col-md-6 col-lg-6 p-2 ">
+          <img src="{% static 'img/abf.png' %}" alt="dy website" class="dyphoto rounded-3 mb-3 my-auto mx-auto d-block bg-transparent">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <h4 class="mt-2 mt-lg-5 text-center fw-bolder text-success roboto-bold">Awareness Brokers Foundation</h4>
+          <p class="text-center fs-6"><a href="http://awarenessbrokers.org/" target="_blank" class="text-decoration-none "> visit the website</a></p>
+          <p class="text-success">
+            The ABF consists of students who have come together to inform the community and solve problems in Afghanistan 
+            that are rooted in ignorance. We have set up this 
+            foundation to build an informed community on all the important issues of the collective.
+          </p>
+        </div>
+      </div>
+  </div>
+
+
+
+
+ <!-- my education -->
+ <!-- <div class="container bg-white pb-4">
+    <div class="row pt-5">
+      <h2 class=" text-center text-warning">My Education</h2>
+      <p class="text-center text-success">
+        I have a bachelor degree from computer science and some diplomas in language and in STEM
+      </p>
+
+        <div class="col-sm-12 col-md-4">
+          <div class="card text-center bg-success my-2 mx-2">
+            <div class="card-header">
+                <h5 class="text-center text-white">Bachelor of Computer Science </h5>
+            </div>
+              <div class="card-body ">
+                <div class="d-block ">
+                  <img class="" src="{% static 'img/logokateb.png' %}" width="70" alt="Kateb Logo">
+                 <a class="text-decoration-none" href="https://kateb.edu.af"> 
+                    <h5 class="text-warning lh-1 pt-2 roboto-bold">Kateb University</h5>
+                  </a>
+                 <p class="text-warning lh-1" > Kabul <span class="text-white"> | </span> 2016 - 2019 </p>
+                 <p class="text-warning ">
+                    I have learnt so much from Kateb, teachers, mentors and 
+                    lecturers, my friends and overall from Kateb community. I have made some awasome friends. 
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+       
+    </div>
+  </div> -->
+{% endblock content %}
