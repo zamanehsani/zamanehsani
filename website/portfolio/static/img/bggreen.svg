@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="1997" height="419" viewBox="0 0 1997 419"><defs><filter id="a" x="0" y="0" 
+ width="1997" height="419" filterUnits="userSpaceOnUse">
+ <feOffset dy="5" input="SourceAlpha"/><feGaussianBlur stdDeviation="12.5" result="b"/>
+ <feFlood flood-color="#198754"/><feComposite operator="in" in2="b"/>
+ <feComposite in="SourceGraphic"/></filter></defs><g transform="translate(37.5 32.5)">
+ <g transform="matrix(1, 0, 0, 1, -37.5, -32.5)" filter="url(#a)">
+ <path d="M0,283.322s294-91.437,538,6.824,546,9.553,546,9.553,250-91.437,500,0,338-9.553,338-9.553V-6L0-.541Z" 
+ transform="translate(37.5 38.5)" fill="#198754"/></g></g></svg>

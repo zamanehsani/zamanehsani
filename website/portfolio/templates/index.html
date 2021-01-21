@@ -2,12 +2,293 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-   <div class="row">
-     
+<div class="container bg-warning shadow" style="margin-top: 60px;">
+   <div class="row p-5">
+     <div class="col">
+       <div class="row">
+         <div class="col-md-6 col-sm-12 col-lg-6 justify-content-center ">
+          <img src="{% static 'img/photo.svg' %}" alt="my photo" height="300" class="d-none d-lg-block d-xl-block">
+         </div>
+       </div>
+     </div>
+     <div class="col-md-6 col-lg-6 col-sm-12">
+       <div class="container p-4">
+         <h6 class="roboto"> Hi,</h5>
+         <h1 class="roboto-bold text-uppercase ms-4">i'm <strong class="text-white fw-bolder roboto-bold">zaman </strong></h1>
+         <h5 class="roboto text-center">Welcome to my Website</h4><br>
+          <p class="roboto text-center"><a href="" class="resume p-3 bg-success rounded-pill text-white text-decoration-none text-capitalize"> WhatsApp me</a></p>
+       </div>
+     </div>
    </div>
+ </div>
+
+ <div class="container p-0 bg-success pt-3">
+   <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center justify-content-md-end">
+         <img class="rounded-2 border border-1 border-warning shadow-lg bg-white" src="{% static 'img/photo.jpg' %}" height="200" alt="my photo">
+      </div>
+      <div class="col-ms-12 col-md-8 col-lg-8 justify-content-center pt-3">
+        <span class="text-warning  fw-bolder">About me</span>
+          <p class="text-white text-sm-center text-start">
+            My name is <strong class="text-warning roboto-bold fs-5">Zaman Ehsani</strong>. I'm a full stack developer based in Dubai, UAE. My passion and dedication to my 
+            career keep me pushing forward. With almost 4 years of experiences in Software; 
+            I have gained professional skills to do the job well and awesome.
+         </p>
+
+         <p class="text-center"> <a href="" class="btn btn-warning text-success ms-auto">See my Resume</a> </p>
+      </div>
+    </div>
+   </div>
+  <div class="bg-wave" style="height: 100px;">
+  </div>
 </div>
 
 
+
+
+<!-- recent works -->
+<div class="container bg-white">
+  <h2 class="text-center fw-bolder text-warning pt-3 roboto-bold">Recent Project</h2>
+  <p class="text-center mb-5 "> <a href="#" class="text-decoration-none"> check out all my works</a></p>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6 p-2 ">
+      <img src="{% static 'img/dy.png' %}" alt="dy website" class="dyphoto rounded-3 mb-3 my-auto mx-auto d-block bg-transparent">
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <h4 class="mt-2 mt-lg-5 text-center fw-bolder text-success roboto-bold">Dynamic Youth of Afghanistan</h4>
+      <p class="text-center fs-6"><a href="https://pacific-spire-86111.herokuapp.com" target="_blank" class="text-decoration-none "> visit the website</a></p>
+      <p class="text-success">
+        DYOA is a non-governmental and not for profit youth-led civil rights organization,
+         works in the areas of Career & Education, Peacebuilding & Leadership Development aligned with the Global 
+         Goals of United Nations (SDGs).
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- skills  -->
+
+<div class="container shadow bg-white pb-4">
+  <div class="row pt-5">
+    <h2 class=" text-center text-warning roboto-bold">Skills I know!</h2>
+    <p class="text-center text-success">I do Full Stack Development, Branding and Designing, Business Development, Project Management.</p>
+      
+      <div class="col-sm-12 col-md-4">
+        <div class="card text-center bg-success my-2 mx-2">
+          <div class="card-header">
+              <h5 class="text-center text-white">Front-End</h5>
+          </div>
+            <div class="card-body ">
+              <div class="d-block ">
+                <p class="btn btn-outline-warning shadow rounded-pill">HTML</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">CSS</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Sass</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Kavascrip</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Jquery</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Ajax</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Bootstrap</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">UI/UX</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Designing</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Brading</p>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4">
+        <div class="card text-center bg-warning my-2 mx-2">
+          <div class="card-header">
+              <h5 class="text-center text-white">Back-End</h5>
+          </div>
+            <div class="card-body ">
+              <div class="d-block ">
+                <p class="btn btn-outline-success shadow rounded-pill">Python</p>
+                <p class="btn btn-outline-success shadow rounded-pill">Django</p>
+                <p class="btn btn-outline-success shadow rounded-pill">PostgreSQL</p>
+                <p class="btn btn-outline-success shadow rounded-pill">MySQL</p>
+                <p class="btn btn-outline-success shadow rounded-pill">OpenCV</p>
+                <p class="btn btn-outline-success shadow rounded-pill">C#</p>
+                <p class="btn btn-outline-success shadow rounded-pill">JAVA</p>
+                <p class="btn btn-outline-success shadow rounded-pill">PHP</p>
+                <p class="btn btn-outline-success shadow rounded-pill">CodeIgniter</p>
+                <p class="btn btn-outline-success shadow rounded-pill">Laravel</p>
+                <p class="btn btn-outline-success shadow rounded-pill">Git</p>
+                <p class="btn btn-outline-success shadow rounded-pill">AWS</p>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4">
+        <div class="card text-center bg-info my-2 mx-2">
+          <div class="card-header">
+              <h5 class="text-center text-white">Software</h5>
+          </div>
+            <div class="card-body ">
+              <div class="d-block ">
+                <p class="btn btn-outline-secondary shadow rounded-pill">Deploment</p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">CI/CD</p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">OWASP</p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">Heroku</p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">OOP</p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">ORM </p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">ORM </p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">API</p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">PWA</p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">SEO</p>
+                <p class="btn btn-outline-secondary shadow rounded-pill">MVP</p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="card text-center bg-primary my-2 mx-2">
+          <div class="card-header">
+              <h5 class="text-center text-white">Management</h5>
+          </div>
+            <div class="card-body ">
+              <div class="d-block ">
+                <p class="btn btn-outline-light shadow rounded-pill">Organized</p>
+                <p class="btn btn-outline-light shadow rounded-pill">Panctual</p>
+                <p class="btn btn-outline-light shadow rounded-pill">Dedication</p>
+                <p class="btn btn-outline-light shadow rounded-pill">Motivited</p>
+                <p class="btn btn-outline-light shadow rounded-pill">Optimism</p>
+                <p class="btn btn-outline-light shadow rounded-pill">Managerail</p>
+                <p class="btn btn-outline-light shadow rounded-pill">Smilling</p>
+                <p class="btn btn-outline-light shadow rounded-pill">Listener</p>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-sm-12 col-md-4">
+        <div class="card text-center bg-danger my-2 mx-2">
+          <div class="card-header">
+              <h5 class="text-center text-white">My Values</h5>
+          </div>
+            <div class="card-body ">
+              <div class="d-block ">
+                <p class="btn btn-outline-warning shadow rounded-pill">Res</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">CI/CD</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">OWASP</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Heroku</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Dgital Marketing</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">SEO</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">MVP</p>
+                <p class="btn btn-outline-warning shadow rounded-pill">Social Media Marketing</p>
+              </div>
+            </div>
+        </div>
+      </div> -->
+  </div>
+</div>
+
+<!-- testinomail -->
+<div class="container bg-white">
+  <div class="team-section p-5">
+      <div class="container">
+        <h3 class="text-center fw-bolder text-warning pt-3"> Testimonial</h3>
+        <p class="text-center text-success"> It's always good idea to hear back from people.</p>
+        
+          <div class="card-team">
+            <div class="container ">
+                <div class="card text-center bg-warning">
+                    <div class="d-flex justify-content-center">
+                        <img src="{% static 'img/naikbeen.jpg' %}" width="70" height="70" class="rounded-circle shadow mt-3" alt="Profile">
+                    </div>
+                    <div class="container">
+                        <h5 class="pt-2 text-success fw-bolder">Naikbeen Naikpay</h5>
+                        <p class="text-secondary">Startup Weekend | Mentor </p>
+                    </div>
+                    <div class="container">
+                        <p class="">
+                          I found Zaman a wonderful guy. He is dedicated and focus. He gets the job done on time. 
+                          He is nice and friendly. During the events and organizing the events, he managed all tasks accordingly. 
+                          He started volunteering. 
+                          soon, he coordinated and managed many events and become of the leading team member.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container ">
+              <div class="card text-center bg-info">
+                  <div class="d-flex justify-content-center">
+                      <img src="{% static 'img/kazim.jfif' %}" width="70" height="70" class="rounded-circle shadow mt-3" alt="Profile">
+                  </div>
+                  <div class="container">
+                      <h5 class="pt-2 text-success">Kazim Haidari</h5>
+                      <p class="text-secondary">DYOA | President</p>
+                  </div>
+                  <div class="container">
+                      <p class="">
+                        My true friend,
+                        Thank you for helping me to be who I am today, I found you smart, kind and impressive. Keep going on and stay happy. 
+                        I am sure soon you’ll make me pride as a friend! <br>
+                        Yours sincerely, <br>
+                        Mohammad Kazim Haidari  <br>
+                        CEO & President at DYAO
+                      </p>
+                  </div>
+              </div>
+            </div>
+            <div class="container ">
+              <div class="card text-center bg-primary">
+                  <div class="d-flex justify-content-center">
+                      <img src="{% static 'img/khodadad.jpg' %}" width="70" height="70" class="rounded-circle shadow mt-3" alt="Profile">
+                  </div>
+                  <div class="container">
+                      <h5 class="pt-2 text-white"> Khudadad Rastagar</h5>
+                      <p class="text-warning">Sr. Team lead | Narinj</p>
+                  </div>
+                  <div class="container">
+                      <p class="text-white">
+                        Zaman was one of the employee that we loved to have him on the team. He loves his roles and is focused. 
+                        He also likes to help team members to succeed together as he understands the teamwork values well. 
+                        He is also friendly and fun to be with. Sometimes, he come up with fun activiteis that is essential 
+                        for the team to stay active. Besides, He is a very punctual man. He is also big fun of deferent foods.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="container ">
+            <div class="card text-center bg-success">
+                <div class="d-flex justify-content-center"> 
+                    <img src="{% static 'img/brono.jpg' %}" width="70" height="70" class="rounded-circle shadow mt-3" alt="Profile">
+                </div>
+                <div class="container">
+                    <h5 class="pt-2 text-warning">Bruno Vitanza Belgrave</h5>
+                    <p class="text-white">President | Subsonic LLC</p>
+                </div>
+                <div class="container">
+                    <p class="text-warning">
+                      Zaman is a funtastic guy to work with. He is awesome in his own way. 
+                      He is quiet and does his duty on time and efficient. He is a great listener and always listens to the 
+                      person and respects others.
+                      As he listen, he can spot the problem and comes up with solutions. 
+                      Zaman is an honest man. He simply expresses the problem and if he can or can't do the task.
+                    </p>
+                </div>
+            </div>
+          </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- companies i worked at/with -->
+<!-- <div class="container shadow pb-4 bg-white  ">
+  <div class="row">
+    <h3 class="text-center fw-bolder text-warning pt-3"> Companies I Worked At/With</h3>
+    <p class="text-center text-success"> check out the nice and good feedback from people i worked with</p>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          companies logo here in carousal
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
 
 {% endblock content %}

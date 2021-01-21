@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+.roboto {
+    font-family: 'Roboto Mono', monospace;
+
+}
+.roboto-bold{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}
+body {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2r9//38gYGAEESAAEGAAasgJOgzOKCoAAAAASUVORK5CYII=);
+}
+
+.bg-wave {
+    background-image: url('../img/bggreen.png');
+    background-position: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bg-footer {
+    background-image: url('../img/bggreen.png');
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dyphoto {
+    width: 80%;
+}
+
+@media screen and (max-width: 576px) {
+    .mobile-center {
+        text-align: center;
+
+    }
+  }

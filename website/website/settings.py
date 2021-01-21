@@ -25,7 +25,7 @@ SECRET_KEY = 'q*=j158*fwv)ns$3yysxz0+q+d(9_=#yf^pxuwu5@5)7de+8cw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zamanehsansi.com', 'www.zamanehsani.com', '127.0.0.1']
+ALLOWED_HOSTS = ['zamanehsansi.com', 'www.zamanehsani.com', '127.0.0.1', '192.168.1.134']
 
 import os
 

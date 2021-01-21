@@ -19,5 +19,6 @@ from portfolio import views as zee_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', zee_view.index, name="home_page"),
+    path('', zee_view.IndexView.as_view(), name="home_page"),
+    path('about', zee_view.About.as_view(), name='about'),
 ]

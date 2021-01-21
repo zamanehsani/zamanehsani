@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container p-0 bg-success pt-3" style="margin-top: 70px;">
+    <div class="container">
+     <div class="row">
+       <div class="col-lg-5 col-md-4 col-sm-12 d-flex justify-content-center justify-content-md-end">
+          <img class="rounded-2 border border-1 border-warning shadow-lg bg-white" src="{% static 'img/me.jpg' %}" height="300" alt="my photo">
+       </div>
+       <div class="col-ms-12 col-md-8 col-lg-7 justify-content-center pt-3">
+         <span class="text-warning ">____ [Bio] </span>
+           <p class="text-white text-sm-center text-start">
+            As, everyone's journey is unique and varies, mine is too. <br> 
+            I was born in a village called Perah located in Panjab, Bamiyan in Afghanistan. After few years, 
+            living in Ghazni city, my family moved to Kabul Afghanistan in pursuit of a better life. 
+            I finished my high school and university in Kabul in 2019. 
+            I have worked at few companies in Afghanistan. 2020 is the year I moved to Dubai. 
+            Currently, I live in Dubai, one of the best and dynamic cities of the world.
+            
+             
+          </p>
+          <p class="text-center"> <a href="#!" class="btn btn-warning text-success ms-auto">Keep reading to know me well</a> </p>
+       </div>
+     </div>
+    </div>
+   <div class="bg-wave" style="height: 100px;">
+   </div>
+ </div>
+
+ <!-- my education -->
+ <div class="container bg-white pb-4">
+    <div class="row pt-5">
+      <h2 class=" text-center text-warning">My Education</h2>
+      <p class="text-center text-success">I have a bachelor degree from computer science and some diplomas in language and in STEM</p>
+        <div class="col-sm-12 col-md-4">
+  
+          <div class="card text-center bg-success my-2 mx-2">
+            <div class="card-header">
+                <h5 class="text-center text-white">Front-End</h5>
+            </div>
+              <div class="card-body ">
+                <div class="d-block ">
+                  <p class="btn btn-outline-warning shadow rounded-pill">HTML</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">CSS</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">Sass</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">Kavascrip</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">Jquery</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">Ajax</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">Bootstrap</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">UI/UX</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">Designing</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">Git</p>
+                  <p class="btn btn-outline-warning shadow rounded-pill">Brading</p>
+                </div>
+              </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-12 col-md-4">
+          <div class="card text-center bg-warning my-2 mx-2">
+            <div class="card-header">
+                <h5 class="text-center text-white">Back-End</h5>
+            </div>
+              <div class="card-body ">
+                <div class="d-block ">
+                  <p class="btn btn-outline-success shadow rounded-pill">Python</p>
+                  <p class="btn btn-outline-success shadow rounded-pill">Django</p>
+                  <p class="btn btn-outline-success shadow rounded-pill">PostgreSQL</p>
+                  <p class="btn btn-outline-success shadow rounded-pill">MySQL</p>
+                  <p class="btn btn-outline-success shadow rounded-pill">OpenCV</p>
+                  <p class="btn btn-outline-success shadow rounded-pill">C#</p>
+                  <p class="btn btn-outline-success shadow rounded-pill">JAVA</p>
+                  <p class="btn btn-outline-success shadow rounded-pill">PHP</p>
+                  <p class="btn btn-outline-success shadow rounded-pill">CodeIgniter</p>
+                  <p class="btn btn-outline-success shadow rounded-pill">Laravel</p>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="card text-center bg-info my-2 mx-2">
+            <div class="card-header">
+                <h5 class="text-center text-secondary">Other</h5>
+            </div>
+              <div class="card-body ">
+                <div class="d-block ">
+                  <p class="btn btn-outline-secondary shadow rounded-pill">Deploment</p>
+                  <p class="btn btn-outline-secondary shadow rounded-pill">CI/CD</p>
+                  <p class="btn btn-outline-secondary shadow rounded-pill">OWASP</p>
+                  <p class="btn btn-outline-secondary shadow rounded-pill">Heroku</p>
+                  <p class="btn btn-outline-secondary shadow rounded-pill">Dgital Marketing</p>
+                  <p class="btn btn-outline-secondary shadow rounded-pill">SEO</p>
+                  <p class="btn btn-outline-secondary shadow rounded-pill">MVP</p>
+                  <p class="btn btn-outline-secondary shadow rounded-pill">Social Media Marketing</p>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+{% endblock content %}

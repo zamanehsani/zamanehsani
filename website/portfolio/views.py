@@ -1,4 +1,11 @@
 from django.shortcuts import render
+from .models import Index
+from django.views.generic import ListView
 
-def index(request):
-    return render(request,"index.html")
+class IndexView(ListView):
+    model = Index
+    template_name = 'index.html'
+
+class About(ListView):
+    model = Index
+    template_name = 'about.html'
