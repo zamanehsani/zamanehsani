@@ -22,4 +22,7 @@ urlpatterns = [
     path('', zee_view.IndexView.as_view(), name="home_page"),
     path('about', zee_view.About.as_view(), name='about'),
     path('work', zee_view.Works.as_view(), name='works'),
+    path('service', zee_view.Service.as_view(), name='service'),
+    path('blog', zee_view.Blog.as_view(), name='blog'),
+    path('contact', zee_view.Contact.as_view(), name='contact'),
 ]

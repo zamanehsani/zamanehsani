@@ -13,3 +13,15 @@ class About(ListView):
 class Works(ListView):
     model = Index
     template_name = 'works.html'
+
+class Service(ListView):
+    model = Index
+    template_name = 'services.html'
+
+class Blog(ListView):
+    model = Index
+    template_name = 'blog.html'
+
+class Contact(ListView):
+    model = Index
+    template_name = 'contact.html'
