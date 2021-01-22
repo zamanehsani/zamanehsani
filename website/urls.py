@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from portfolio import views as zee_view
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +27,7 @@ urlpatterns = [
     path('service', zee_view.Service.as_view(), name='service'),
     path('blog', zee_view.Blog.as_view(), name='blog'),
     path('contact', zee_view.Contact.as_view(), name='contact'),
+    path("post/<int:pk>", zee_view.Post.as_view(), name="post"),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

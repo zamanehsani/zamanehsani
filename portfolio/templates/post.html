@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container p-0 bg-success">
+    <div class="container">
+     <div class="row">
+       <div class="col-ms-12 col-md-12 justify-content-center pt-4">
+           <p class="text-white text-center fs-5 text-start"> {{object.title}}</p>
+           <p class="text-warning text-center">{{object.date}}</p>
+       </div>
+     </div>
+    </div>
+   <div class="bg-wave" style="height: 100px;">
+   </div>
+ </div>
+
+
+ <div class="container bg-white pb-3">
+  <div class="container p-0 bg-white">
+    <div class="container">
+     <div class="row">
+    
+      <div class="col-sm-12 col-md-10 mx-auto">
+        <div class="card bg-light shadow my-3 mx-2" >
+          <img src="{{object.image.url}}" class="card-img-top" alt="{{object.title}}">
+          <div class="card-body  pt-2">
+            <p class="card-text text-success">{{object.post}}   </p>
+          </div>
+        </div>
+      </div>
+  
+     </div>
+    </div>
+  
+  </div>
+ </div>
+{% endblock content %}

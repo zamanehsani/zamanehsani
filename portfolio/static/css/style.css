@@ -44,3 +44,17 @@ body {
 
     }
   }
+  .bodymovinanim {
+    max-width: 50px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  .preloader {
+    width: 90%;
+    max-width: 50px;
+    margin-bottom: 30px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+  }

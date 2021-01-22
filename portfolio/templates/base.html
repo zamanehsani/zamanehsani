@@ -25,7 +25,7 @@
   </head>
   <body style="font-family: 'Comfortaa', cursive;" class=" bg-light">
 
-    <div class="bg-success shadow">
+    <div class="bg-success shadow-lg">
       <div class="container">
         <nav class="navbar fixed-top bg-success navbar-expand-lg navbar-dark">
           <div class="container-fluid">
@@ -33,7 +33,7 @@
               <img src="{% static 'img/logo.png' %}" alt="Logo"  height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <div class="bodymovinanim"></div>
             </button>
     
             <div class="collapse navbar-collapse justify-content-center pt-2" id="navbarSupportedContent">
@@ -57,27 +57,15 @@
                   <h5><a class="nav-link text-warning" href="{% url 'contact' %}">contact me</a></h5>
                 </li>
               </ul>
-              <div class="d-flex ms-auto">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link " href="https://www.facebook.com/zaman.ehsani"  title="Find me on Facebook" target="_blank"><h5> <span class="iconify" data-icon="fa:facebook"></span></h5></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="https://www.instagram.com/zaman_ehsani/" title="Follow me on Instagram" target="_blank"><h5><span class="iconify" data-icon="fa:instagram"></span></h5></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="https://www.linkedin.com/in/zamanehsani/" title="Connect With me on Linkedin" target="_blank"><h5><span class="iconify" data-icon="fa:linkedin"></span></h5></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="https://github.com/Zee98" title="See my Github Profile" target="_blank"><h5><span class="iconify" data-icon="fa:github"></span></h5></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="https://wa.me/message/A4D76HO6P7DKH1" title=" Reach me on WhatsApp" target="_blank"><h5><span class="iconify" data-icon="fa:whatsapp"></span></h5></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="https://t.me/zamanehsani98" title="Reach me on Telegram" target="_blank"><h5><span class="iconify" data-icon="fa:telegram"></span></h5></a>
-                  </li>
-                </ul>
+              <div class="d-flex ms-auto justify-content-center">
+                <div class="d-flex justify-content-sm-center">
+                  <a class="nav-link text-light hover " href="https://www.facebook.com/zaman.ehsani"  title="Find me on Facebook" target="_blank"><h5> <span class="iconify" data-icon="fa:facebook"></span></h5></a>
+                  <a class="nav-link text-light hover " href="https://www.instagram.com/zaman_ehsani/" title="Follow me on Instagram" target="_blank"><h5><span class="iconify" data-icon="fa:instagram"></span></h5></a>
+                  <a class="nav-link text-light hover " href="https://www.linkedin.com/in/zamanehsani/" title="Connect With me on Linkedin" target="_blank"><h5><span class="iconify" data-icon="fa:linkedin"></span></h5></a>
+                  <a class="nav-link text-light hover " href="https://github.com/Zee98" title="See my Github Profile" target="_blank"><h5><span class="iconify" data-icon="fa:github"></span></h5></a>
+                  <a class="nav-link text-light hover " href="https://wa.me/message/A4D76HO6P7DKH1" title=" Reach me on WhatsApp" target="_blank"><h5><span class="iconify" data-icon="fa:whatsapp"></span></h5></a>
+                  <a class="nav-link text-light hover " href="https://t.me/zamanehsani98" title="Reach me on Telegram" target="_blank"><h5><span class="iconify" data-icon="fa:telegram"></span></h5></a>
+                </div>
               </div>
             </div>
           </div>
@@ -86,6 +74,15 @@
     </div>
 
     <div class="container" style="margin-top: 65px;"></div>
+
+    <!-- here is the preloader but does not work -->
+    <!-- <div class="container pore">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <div class="preloader"></div>
+        </div>
+      </div>
+    </div> -->
 
     {% block content %}
 
@@ -116,21 +113,54 @@
     -->
         <!-- js slider carousel -->
         <script src="{% static 'js/slick.min.js' %}"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
 
         <script>
           
           $(document).ready(function(){
-        $('.card-team').slick({
-            arrows: true,
-            cssEase: "ease",
-            // dots:true,
-            mobileFirst:true,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 6000,
-        }) 
-    });
+            $('.card-team').slick({
+                arrows: true,
+                cssEase: "ease",
+                // dots:true,
+                mobileFirst:true,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 6000,
+              }) 
+          });
 
+
+          //Play an animation back on second click
+          let iconMenu = document.querySelector('.bodymovinanim');
+            let animationMenu = bodymovin.loadAnimation({
+              container: iconMenu,
+              renderer: 'svg',
+              loop: false,
+              autoplay: false,
+              path: "{% static 'menuV4.json' %}"
+            });
+
+            var directionMenu = 1;
+              iconMenu.addEventListener('click', (e) => {
+              animationMenu.setDirection(directionMenu);
+              animationMenu.play();
+              directionMenu = -directionMenu;
+            });
+
+
+            // loading preloader
+          let svgContainer = document.querySelector('.preloader');
+            let animItem = bodymovin.loadAnimation({
+              wrapper: svgContainer,
+              animType: 'svg',
+              loop: true,
+              path: "{% static 'infinity.json' %}"
+            });
+
+            // st time out of preloader
+            setTimeout(function(){
+              $('.pore').fadeToggle();
+            }, 1500);
         </script>
   </body>
 </html>

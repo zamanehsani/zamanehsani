@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Index
-from django.views.generic import ListView
+from .models import Index, Post
+from django.views.generic import ListView, DetailView
 
 class IndexView(ListView):
     model = Index
@@ -19,8 +19,16 @@ class Service(ListView):
     template_name = 'services.html'
 
 class Blog(ListView):
-    model = Index
+    model = Post
+    context_object_name = 'objects'
     template_name = 'blog.html'
+    ordering = ['-date']
+    paginate_by = 3
+
+class Post(DetailView):
+    model = Post
+    template_name = 'post.html'
+
 
 class Contact(ListView):
     model = Index
