@@ -22,3 +22,18 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Comment(models.Model):
+    name = models.CharField(max_length=200, null=True, blank=True)
+    email = models.EmailField()
+    comment = models.TextField()
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.email
+
+class Like(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    like = models.SmallIntegerField()
+    

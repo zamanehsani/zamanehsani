@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from .models import Index, Post
+from django.shortcuts import render, HttpResponse
+from .models import Index, Post, Comment, Like
 from django.views.generic import ListView, DetailView
 
 class IndexView(ListView):
@@ -29,6 +29,19 @@ class Post(DetailView):
     model = Post
     template_name = 'post.html'
 
+    def add_comment(request):
+        if request.mothod == 'POST':
+            name = request.POST['name']
+            email = request.POST['email']
+            comment = request.POST['comment']
+
+            Comment.objects.create(
+                name = name,
+                email = email,
+                comment = comment
+            )
+
+            return HttpResponse('')
 
 class Contact(ListView):
     model = Index

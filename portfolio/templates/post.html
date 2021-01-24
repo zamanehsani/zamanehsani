@@ -25,17 +25,58 @@
       <div class="col-sm-12 col-md-10 mx-auto ">
         <div class="card bg-light border-0 my-3 mx-2" >
           <img src="{{ object.image.url }}" class="card-img-top" alt="{{object.title|safe}}">
-          <div class="card-body pt-2">
-            <p class="py-0">
-              <span class="iconify " data-icon="flat-color-icons:like" data-inline="false"></span> 
-              <span style="font-size: small;">14</span> &nbsp;&nbsp;
-              <span class="iconify text-primary" data-icon="ant-design:comment-outlined" data-inline="false"></span>
-              <span style="font-size: small;">7</span> &nbsp;&nbsp;
-              <span style="font-size: small;">{{object.date}}</span> 
-            </p>
-              <h5 class="card-title text-warning text-capitalize roboto-bold">{{object.title}}</h5>
+          <div class="card-body">
+              <h5 class="card-title text-warning text-capitalize roboto-bold py-2">{{object.title}} <span class="text-success" style="font-size: small;">{{object.date}}</span> </h5>
             <p class="card-text text-success">{{object.post|safe}} </p>
           </div>
+        </div>
+
+        <div class="container">
+          <hr>
+          <!-- <h5 class="roboto-bold text-success pb-2">Add Comment</h4> -->
+            <p class="py-0 fs-4 lh-1">
+              <span class="iconify " data-icon="flat-color-icons:like" data-inline="false"></span> 
+              {% for likes in object.like_set.all %}
+              <span style="font-size: small;">{{likes.like}}</span> 
+              {% endfor %}&nbsp;&nbsp;
+              <span class="iconify text-primary" data-icon="ant-design:comment-outlined" data-inline="false"></span>
+              <span style="font-size: small;">7</span>
+            </p>
+
+            {% for comm in object.comment_set.all %}
+            <div class="row bg-light shadow-sm rounded-3 my-2">
+              <p class="text-success lh-1 mt-3"><strong>{{comm.name}}</strong> <span class="small">&nbsp;&nbsp; {{comm.date}}</span></p>
+              <p class="lh-1">{{comm.comment}}</p>
+            </div>
+          {% endfor %}
+            
+          <div class="container">
+            <div class="row">
+              <form id="add_comment" >  {% csrf_token %}
+                <div class="row">
+                  <p class="text-success roboto-bold mt-2">Add comment</p>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="form-group">
+                      <input type="text" required class="form-control" id="name_id" placeholder="your Name">
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="form-group">
+                      <input type="email" required class="form-control" id="email_id" placeholder="name@example.com">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" required placeholder="Your comments here" id="comment_id" rows="3"></textarea>
+                </div>
+                
+                <div class="text-right d-flex justify-content-end mt-3">
+                  <input class="btn btn-success text-right" type="submit" name="submit" value="Add Comment">
+                </div>
+              </form>
+            </div>
+          </div>
+          
         </div>
   
      </div>
