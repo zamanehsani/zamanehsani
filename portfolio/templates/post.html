@@ -24,17 +24,17 @@
      <div class="row">
       <div class="col-sm-12 col-md-10 mx-auto ">
         <div class="card bg-light border-0 my-3 mx-2" >
-          <img src="{{ object.image.url }}" class="card-img-top" alt="{{object.title}}">
+          <img src="{{ object.image.url }}" class="card-img-top" alt="{{object.title|safe}}">
           <div class="card-body pt-2">
             <p class="py-0">
               <span class="iconify " data-icon="flat-color-icons:like" data-inline="false"></span> 
               <span style="font-size: small;">14</span> &nbsp;&nbsp;
               <span class="iconify text-primary" data-icon="ant-design:comment-outlined" data-inline="false"></span>
               <span style="font-size: small;">7</span> &nbsp;&nbsp;
-              <span style="font-size: small;">{{object.date}}</span> 
+              <span style="font-size: small;">{{object.date|safe}}</span> 
             </p>
               <h5 class="card-title text-warning text-capitalize roboto-bold">{{object.title}}</h5>
-            <p class="card-text text-success">{{object.post}} </p>
+            <p class="card-text text-success">{{object.post|safe}} </p>
           </div>
         </div>
   
