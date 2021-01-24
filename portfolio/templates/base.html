@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="theme-color" content="#198754">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Zaman</title>
@@ -89,14 +89,25 @@
     {% endblock content %}
 
     <div class="bg-footer container" style="height: 100px; ">   </div>
-    <div class="container bg-success">
+    <div class="container bg-success pb-3">
       <div class="row">
+        <div class="col d-flex ms-auto justify-content-center">
+          <div class="d-flex justify-content-sm-center">
+            <a class="nav-link text-light hover " href="https://www.facebook.com/zaman.ehsani"  title="Find me on Facebook" target="_blank"><h5> <span class="iconify" data-icon="fa:facebook"></span></h5></a>
+            <a class="nav-link text-light hover " href="https://www.instagram.com/zaman_ehsani/" title="Follow me on Instagram" target="_blank"><h5><span class="iconify" data-icon="fa:instagram"></span></h5></a>
+            <a class="nav-link text-light hover " href="https://www.linkedin.com/in/zamanehsani/" title="Connect With me on Linkedin" target="_blank"><h5><span class="iconify" data-icon="fa:linkedin"></span></h5></a>
+            <a class="nav-link text-light hover " href="https://github.com/Zee98" title="See my Github Profile" target="_blank"><h5><span class="iconify" data-icon="fa:github"></span></h5></a>
+            <a class="nav-link text-light hover " href="https://wa.me/message/A4D76HO6P7DKH1" title=" Reach me on WhatsApp" target="_blank"><h5><span class="iconify" data-icon="fa:whatsapp"></span></h5></a>
+            <a class="nav-link text-light hover " href="https://t.me/zamanehsani98" title="Reach me on Telegram" target="_blank"><h5><span class="iconify" data-icon="fa:telegram"></span></h5></a>
+          </div>
+        </div>
         <div class="col">
           <a class="text-center d-flex justify-content-center" href="{% url 'home_page' %}">
             <img src="{% static 'img/logo.png' %}" alt="Logo"  height="50">
           </a>
           <!-- <p class="text-warning text-center">This is my personal website and it is under construction.</p> -->
         </div>
+        
       </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
