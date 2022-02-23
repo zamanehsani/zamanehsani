@@ -1,4 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
+
+from portfolio import forms
 from .models import Index, Post, Comment, Like
 from django.views.generic import ListView, DetailView
 
@@ -29,19 +31,42 @@ class Post(DetailView):
     model = Post
     template_name = 'post.html'
 
-    def add_comment(request):
-        if request.mothod == 'POST':
-            name = request.POST['name']
-            email = request.POST['email']
-            comment = request.POST['comment']
+    def post(self, request, pk):
+        from . import forms
+        from django.core.mail import send_mail
+        from django.conf import settings
+        form = forms.CommentForm(request.POST)
+        if form.is_valid():
+            form.save()
 
-            Comment.objects.create(
-                name = name,
-                email = email,
-                comment = comment
-            )
+            # sending a welcoming email
+            # message = " your have recieved a comment on your post\n"
+            # message += "\""
+            # message +=  form.cleaned_data.get('comment')
+            # message += "\""
+            # name = form.cleaned_data.get('name')
+            # send_mail(
+            #      name + ' has commented on your post',
+            #     message,
+            #     settings.EMAIL_HOST_USER,
+            #     ['zamanehsani@yahoo.com'],
+            #     fail_silently=False,
+            # )
+            return redirect('post', request.POST.get('post'))
 
-            return HttpResponse('')
+    # def add_comment(request):
+    #     if request.mothod == 'POST':
+    #         name = request.POST['name']
+    #         email = request.POST['email']
+    #         comment = request.POST['comment']
+
+    #         Comment.objects.create(
+    #             name = name,
+    #             email = email,
+    #             comment = comment
+    #         )
+
+            # return HttpResponse('')
 
 class Contact(ListView):
     model = Index

@@ -193,24 +193,24 @@
 
             // add comment ajax form
 
-            $(document).on('submit', '#add_comment', function(e){
-              e.preventDefault();
-              $.ajax({
-                type: 'POST',
-                url: '/add_comment/',
-                data: {
-                  name: $('#name_id').val(),
-                  email: $('#email_id').val(),
-                  comment: $('#comment_id').text(),
-                  csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
-                },
-                success: function(){
-                  alert("you have added a comment!");
-                }
+            // $(document).on('submit', '#add_comment', function(e){
+            //   e.preventDefault();
+            //   $.ajax({
+            //     type: 'POST',
+            //     url: './add_comment/',
+            //     data: {
+            //       name: $('#name_id').val(),
+            //       email: $('#email_id').val(),
+            //       comment: $('#comment_id').text(),
+            //       csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+            //     },
+            //     success: function(){
+            //       alert("you have added a comment!");
+            //     }
 
-              });
+            //   });
 
-            });
+            // });
         </script>
   </body>
 </html>

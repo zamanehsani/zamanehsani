@@ -52,33 +52,31 @@
             
           <div class="container">
             <div class="row">
-              <form id="add_comment" >  {% csrf_token %}
+              <form id="add_comment" action=""  method="post" > {% csrf_token %}
                 <div class="row">
-                  <p class="text-success roboto-bold mt-2">Add comment</p>
-                  <div class="col-sm-12 col-md-6">
+                  <p class="text-success roboto-bold mt-2">Add a comment</p>
+                  <input type="hidden" name="post" value="{{object.pk}}">
+                  <div class="col-sm-12 col-md-6 ">
                     <div class="form-group">
-                      <input type="text" required class="form-control" id="name_id" placeholder="your Name">
+                      <input type="text" required class="form-control" name="name" placeholder="your Name">
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-6">
                     <div class="form-group">
-                      <input type="email" required class="form-control" id="email_id" placeholder="name@example.com">
+                      <input type="email" required class="form-control" name="email" placeholder="name@example.com">
                     </div>
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" required placeholder="Your comments here" id="comment_id" rows="3"></textarea>
+                  <textarea class="form-control" required placeholder="Your comments here" name="comment" rows="3"></textarea>
                 </div>
-                
                 <div class="text-right d-flex justify-content-end mt-3">
-                  <input class="btn btn-success text-right" type="submit" name="submit" value="Add Comment">
+                  <input class="btn btn-success text-right" type="submit" value="Add comment">
                 </div>
               </form>
             </div>
           </div>
-          
         </div>
-  
      </div>
     </div>
  </div>

@@ -27,9 +27,12 @@
      <div class="row">
     
       {% for obj in objects %}
+      
       <div class="col-sm-12 col-md-4">
         <div class="card bg-light shadow my-3 mx-2" >
-          <img src="{{ obj.image.url }}" class="card-img-top" alt="post photo">
+          <a href="{% url 'post' obj.id %}">
+            <img src="{{ obj.image.url }}" class="card-img-top" alt="post photo">
+          </a>
           <div class="card-body  pt-2">
             <p class="py-0">
               <span class="iconify " data-icon="flat-color-icons:like" data-inline="false"></span> 
@@ -41,7 +44,8 @@
             <a href="{% url 'post' obj.id %}" class="text-decoration-none">
               <h5 class="card-title text-warning text-capitalize roboto-bold">{{obj.title|safe}}</h5>
             </a>
-            <p class="card-text text-success">{{obj.abstract|safe}} </p>
+
+            <p class="card-text"><a class="text-decoration-none text-success" href="{% url 'post' obj.id %}">{{obj.abstract|safe}}</a> </p>
           </div>
         </div>
       </div>

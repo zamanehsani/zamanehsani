@@ -108,10 +108,10 @@ AUTH_PASSWORD_VALIDATORS = [
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = '	zamanehsani@gmail.com'
-EMAIL_HOST_PASSWORD = 'fjztkzvoozmawqib' #past the key or password app here
+EMAIL_HOST_PASSWORD = 'sntspgmdvsgiavpe' #past the key or password app here
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'from zaman'
+DEFAULT_FROM_EMAIL = 'zaman'
 
 # Internationalization
 

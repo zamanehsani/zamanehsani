@@ -28,7 +28,7 @@ urlpatterns = [
     path('blog', zee_view.Blog.as_view(), name='blog'),
     path('contact', zee_view.Contact.as_view(), name='contact'),
     path("post/<int:pk>", zee_view.Post.as_view(), name="post"),
-    path("add_comment", zee_view.Post.add_comment, name="add_comment"),
+    # path("add_comment", zee_view.Post.add_comment, name="add_comment"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
