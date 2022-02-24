@@ -19,8 +19,10 @@ class Post(models.Model):
     post = models.TextField()
     author = models.ForeignKey(User, on_delete = models.CASCADE)
     image = models.ImageField(default= 'Post_cover.jpg', upload_to='blog_pics')
+    views = models.IntegerField(default=0)
 
     def __str__(self):
+        
         return self.title
 
 class Comment(models.Model):
@@ -36,4 +38,7 @@ class Comment(models.Model):
 class Like(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     like = models.SmallIntegerField()
-    
+
+class View(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    view = models.IntegerField()

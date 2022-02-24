@@ -35,12 +35,11 @@
           <hr>
           <!-- <h5 class="roboto-bold text-success pb-2">Add Comment</h4> -->
             <p class="py-0 fs-4 lh-1">
-              <span class="iconify " data-icon="flat-color-icons:like" data-inline="false"></span> 
-              {% for likes in object.like_set.all %}
-              <span style="font-size: small;">{{likes.like}}</span> 
-              {% endfor %}&nbsp;&nbsp;
-              <span class="iconify text-primary" data-icon="ant-design:comment-outlined" data-inline="false"></span>
-              <span style="font-size: small;">7</span>
+              <span class="iconify text-success" data-icon="bi:eye-fill" data-inline="false"></span> 
+              <span class="text-success" style="font-size: small;">{{object.views}}</span> 
+              &nbsp;&nbsp;
+              <span class="iconify text-success" data-icon="ant-design:comment-outlined" data-inline="false"></span>
+              <span class="text-success" style="font-size: small;">{{object.comment_set.count}}</span>
             </p>
 
             {% for comm in object.comment_set.all %}

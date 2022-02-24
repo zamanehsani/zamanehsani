@@ -1,7 +1,9 @@
+from gc import get_objects
+from pyexpat import model
 from django.shortcuts import render, HttpResponse, redirect
 
 from portfolio import forms
-from .models import Index, Post, Comment, Like
+from .models import Index, Post, Comment, View
 from django.views.generic import ListView, DetailView
 
 class IndexView(ListView):
@@ -30,6 +32,17 @@ class Blog(ListView):
 class Post(DetailView):
     model = Post
     template_name = 'post.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Post, self).get_context_data(**kwargs)
+        # get post object and increment the view in each get request
+        obj = self.get_object()
+        views = obj.views
+        views +=1
+        obj.views = views
+        obj.save()
+        return context
+
 
     def post(self, request, pk):
         from . import forms

@@ -35,11 +35,11 @@
           </a>
           <div class="card-body  pt-2">
             <p class="py-0">
-              <span class="iconify " data-icon="flat-color-icons:like" data-inline="false"></span> 
-              <span style="font-size: small;">14</span> &nbsp;&nbsp;
-              <span class="iconify text-primary" data-icon="ant-design:comment-outlined" data-inline="false"></span>
-              <span style="font-size: small;">7</span> &nbsp;&nbsp;
-              <span style="font-size: small;">{{obj.date}}</span> 
+              <span class="iconify text-success" data-icon="bi:eye-fill" data-inline="false"></span> 
+              <span class="text-success" style="font-size: small;">{{obj.views}}</span> &nbsp;&nbsp;
+              <span class="iconify text-success" data-icon="ant-design:comment-outlined" data-inline="false"></span>
+              <span class="text-success" style="font-size: small;">{{obj.comment_set.count}}</span> &nbsp;&nbsp;
+              <span class="text-success" style="font-size: small;">{{obj.date}}</span> 
             </p>
             <a href="{% url 'post' obj.id %}" class="text-decoration-none">
               <h5 class="card-title text-warning text-capitalize roboto-bold">{{obj.title|safe}}</h5>
