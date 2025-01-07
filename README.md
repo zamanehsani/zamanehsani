@@ -9,9 +9,9 @@
 
 - 🔭 I’m currently working on [The Democracy! Straight Up, Project](https://democracystraightup.org/)
 
-- 🌱 I’m currently learning **TypeScript, Sockets and a bit of AI**
+- 🌱 I’m currently learning **software architecture, Microservices and and AI**
 
-- 💬 Ask me about **React,TypeScript, Python, Django,**
+- 💬 Ask me about **Node.js, React.js, Next,js, TypeScript, Python, Django, flask and docker, kuberneties, events and messaging brokers**
 
 - 📫 How to reach me **zamanehsani@gmail.com**
 
