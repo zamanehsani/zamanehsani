@@ -7,7 +7,7 @@
 
 <p align="left"> <a href="https://twitter.com/zamanehsani" target="blank"><img src="https://img.shields.io/twitter/follow/zamanehsani?logo=twitter&style=for-the-badge" alt="zamanehsani" /></a> </p>
 
-- 🔭 I’m currently working on [The Democracy! Straight Up, Project](https://democracystraightup.org/)
+- 🔭 I’m currently working with [coderHQ.co](https://coderhq.co/)
 
 - 🌱 I’m currently learning **software architecture, Microservices and and AI**
 
